@@ -1,0 +1,19 @@
+class Employee:
+    raise_amount= 2
+    num_of_employee=0
+
+    def __init__(self, first, last, pay):
+        self.firstname=first
+        self.lastname=last
+        self.salary=pay
+        self.emailid= first+'.'+last+ '@company.com'
+        Employee.num_of_employee+=1
+
+    def fullname(self):
+        print('{},{}'.format(self.firstname,self.lastname))
+
+    def apply_raise(self):
+        self.salary=int(self.salary) * self.raise_amount
+print(Employee.num_of_employee)
+emp1=Employee('Gaurav','Kumar', '70000')
+emp2=Employee('Tarun','Kumar', '120000')
